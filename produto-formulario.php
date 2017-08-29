@@ -1,7 +1,11 @@
 <?php 
 	include("conecta.php");
 	include("banco-categoria.php");
+	include("logica-usuario.php");
 	include("cabecalho.php"); 
+
+	verificaUsuario();
+
 ?>
 
 <h1>Formulário de cadastro</h1>

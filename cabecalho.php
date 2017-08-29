@@ -2,8 +2,8 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="css/minha_loja.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<meta charset="UTF-8">
 	<title>Loja</title>
 </head>
