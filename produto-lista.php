@@ -1,10 +1,12 @@
 <?php 
 	include("conecta.php");
 	include("banco-produto.php");
+	include("logica-usuario.php");
 	include("cabecalho.php");
 
-	if(array_key_exists('removido', $_GET) && $_GET['removido'] == TRUE) {
-		echo "<p class='text-success'>Produto {$_GET['id']} removido !!</p>";
+	if(isset($_SESSION["success"])) {
+		echo "<p class='text-success'>{$_SESSION['success']}</p>";
+		unset($_SESSION["success"]);
 	}
 ?>
 

@@ -7,10 +7,12 @@ require_once("logica-usuario.php");
 $usuario = buscaUsuario($con, $_POST['email'], $_POST['senha']);
 
 if($usuario == NULL) {
-	header("Location: index.php?login=0");
+	$_SESSION["danger"] = "Usuário e/ou senha inválido(s)";
+	header("Location: index.php");
 } else {
 	logaUsuario($usuario['email']);
-	header("Location: index.php?login=1");
+	$_SESSION["success"] = "Logado com sucesso !!";
+	header("Location: index.php");
 }
 
 die();

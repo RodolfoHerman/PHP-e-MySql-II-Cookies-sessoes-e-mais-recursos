@@ -2,21 +2,23 @@
 include("cabecalho.php"); 
 include("logica-usuario.php");
 ?>
-
-	<?php if(array_key_exists('logout', $_GET) && $_GET['logout'] == TRUE):?>
-		<p class="alert-success">Deslogado com sucesso !!</p>
-	<?php endif; ?>
 	
-	<?php if(array_key_exists('login', $_GET) && $_GET['login'] == TRUE):?>
-		<p class="alert-success">Logado com sucesso !!</p>
+	<?php if(isset($_SESSION["success"])):?>
+		<p class="alert-success">
+			<?php 
+				echo $_SESSION["success"];
+				unset($_SESSION["success"]);
+			?>
+		</p>
 	<?php endif; ?>
 
-	<?php if(array_key_exists('login', $_GET) && $_GET['login'] == FALSE): ?>
-		<p class="alert-danger">Usuário e/ou senha inválido(s)</p>
-	<?php endif; ?>
-
-	<?php if(array_key_exists('falhaDeSeguranca', $_GET) && $_GET['falhaDeSeguranca'] == TRUE): ?>
-		<p class="alert-danger">Você não possui acesso a esta funcionalidade</p>
+	<?php if(isset($_SESSION["danger"])): ?>
+		<p class="alert-danger">
+			<?php 
+				echo $_SESSION["danger"]; 
+				unset($_SESSION["danger"]);
+			?>	
+		</p>
 	<?php endif; ?>
 
 	<h1>Bem Vindo !!</h1>
