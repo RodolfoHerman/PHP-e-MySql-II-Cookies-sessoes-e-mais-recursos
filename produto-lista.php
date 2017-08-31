@@ -1,13 +1,8 @@
 <?php 
 	include("conecta.php");
 	include("banco-produto.php");
-	include("logica-usuario.php");
 	include("cabecalho.php");
 
-	if(isset($_SESSION["success"])) {
-		echo "<p class='text-success'>{$_SESSION['success']}</p>";
-		unset($_SESSION["success"]);
-	}
 ?>
 
 <table class="table table-striped table-hover table-bordered">
