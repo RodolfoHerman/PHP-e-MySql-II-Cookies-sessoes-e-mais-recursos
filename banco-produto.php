@@ -4,7 +4,6 @@ function listaProdutos($con) {
 
 	$query = "SELECT p.*, c.nome as categoria_nome FROM produtos p JOIN categorias c ON p.categoria_id = c.id";
 
-	//$query = "SELECT * FROM produtos";	
 	$resultado = $con->query($query);
 	
 	$produtos = array();
@@ -28,6 +27,11 @@ function alteraProduto($con, $nome, $preco, $descricao, $categoria_id, $usado, $
 }
 
 function insereProduto($con, $nome, $preco, $descricao, $categoria_id, $usado) {
+	
+	$nome = $con->real_escape_string($nome);
+	$preco = $con->real_escape_string($preco);
+	$descricao = $con->real_escape_string($descricao);
+
 	$query = "INSERT INTO produtos (nome, preco, descricao, categoria_id, usado) VALUES ('{$nome}', {$preco}, '{$descricao}', {$categoria_id}, {$usado})";
 	return $con->query($query);
 }
