@@ -1,8 +1,8 @@
 <?php
-	include("conecta.php"); 
-	include("banco-produto.php");
-	include("logica-usuario.php");
-	include("cabecalho.php");
+
+	require_once("banco-produto.php");
+	require_once("logica-usuario.php");
+	require_once("cabecalho.php");
 
 	verificaUsuario();
 

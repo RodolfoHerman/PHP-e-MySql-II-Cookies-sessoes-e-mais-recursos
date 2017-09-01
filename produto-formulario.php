@@ -1,8 +1,7 @@
 <?php 
-	include("conecta.php");
-	include("banco-categoria.php");
-	include("logica-usuario.php");
-	include("cabecalho.php"); 
+	require_once("banco-categoria.php");
+	require_once("logica-usuario.php");
+	require_once("cabecalho.php"); 
 
 	verificaUsuario();
 	$produto = array("nome" => "", "preco" => "", "descricao" => "", "usado" => "", "categoria_id" => "1");
