@@ -1,6 +1,6 @@
 # PHP-e-MySql-II-Cookies-sessoes-e-mais-recursos
 
-##10 Tópicos básicos, separadas por commits, referente a fundamentos iniciais de um sistema web com PHP e MySQL.
+## 10 Tópicos básicos, separadas por commits, referente a fundamentos iniciais de um sistema web com PHP e MySQL.
 
 - Tópico 1  - Uma ação de login
 
