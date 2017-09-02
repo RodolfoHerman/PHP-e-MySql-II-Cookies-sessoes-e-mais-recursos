@@ -34,4 +34,4 @@ require_once("logica-usuario.php");
 
 	<?php endif; ?>
 
-<?php include("rodape.php"); ?>	
+<?php require_once("rodape.php"); ?>	
